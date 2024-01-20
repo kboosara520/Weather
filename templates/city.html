@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Weather: {{ city }}
+{% endblock %}
+
+{% block main %}
+    <div class="container justify-content-center px-4" style="max-width: 500px; display: flex; margin-top: 4rem;">
+        <div class="align-self-center">
+            <h1 class="text" style="font-size: 4rem;">{{ city }}</h1>
+            <ul class="list-group pt-2 pb-3">
+                {% for item in items %}
+                    <li class="list-group-item">{{ item }}</li>
+                {% endfor %}
+            </ul>
+            {% if logged_in %}
+                <div class="d-grid gap-2">
+                    <button class="btn {{ color }} mb-3" id="save" value={{ button }} {{ disabled_att }}>{{ save }}</button>
+                </div> 
+            {% endif %}
+        </div>
+    </div>
+    <script src="/static/js/favorites.js"></script>
+{% endblock %}
