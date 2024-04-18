@@ -1,5 +1,4 @@
 # Weather
-#### Video Demo:  https://youtu.be/IbIy9I1BVts
 #### Description:
 
 Hello, This is Weather. It is a web application for finding weather information of cities. It uses python, SQL, HTML, CSS, Javasript, and Flask as the framework.
